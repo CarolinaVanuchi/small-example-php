@@ -6,17 +6,13 @@ class Algorithms {
         Crie um programa que receba uma palavra ou frase e mostre o texto invertido. Exemplo: "programação" deve aparecer como "oãçamargorp"
     */
 
-    public function reverseString(String $txt) {
-        return strrev($txt);
+    public function reverseString(String $text) {
+        return strrev($text);
     }
     
-    public function reverseStringWithFor(String $txt) {
+    public function reverseStringWithFor(String $text) {
         $reverseWord = "";
-        for ($i = (strlen($txt) - 1); $i >= 0; $i--) {
-            $reverseWord .= $txt[$i];
-
-        }
-        
+        for ($i = (strlen($text) - 1); $i >= 0; $i--) $reverseWord .= $text[$i];
         return $reverseWord;
     }
 
@@ -59,9 +55,7 @@ class Algorithms {
 
     public function factorialWithFor(int $n) {
         $result = 1;
-        for ($i = $n; $i >= 1; $i--) {
-            $result *= $i; 
-        }
+        for ($i = $n; $i >= 1; $i--) $result *= $i; 
         return $result;
     }
 }
